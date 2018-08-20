@@ -1,0 +1,25 @@
+@import ../../shared/sass/vars
+
+.nav
+  padding: 40px 0
+  &__list
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    margin: 0
+    padding: 0
+    list-style: none
+    @media (max-width: 600px)
+      justify-content: center
+  &__item
+    a
+      display: block
+      padding: 5px 0
+      margin-right: 45px
+      color: $blue
+      text-decoration: none
+      &:hover
+        color: $cyan
+        text-decoration: underline
+      @media (max-width: 992px)
+        margin-right: 20px

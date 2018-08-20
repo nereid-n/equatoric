@@ -1,0 +1,197 @@
+@import vars
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:700&subset=cyrillic')
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&subset=cyrillic')
+
+body
+  margin: 0
+
+img
+  max-width: 100%
+  width: auto
+  height: auto
+
+section
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+
+.root
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  color: $blue
+  font-family: $Montserrat
+
+.main
+  display: flex
+  flex-direction: column
+  justify-content: center
+  flex-grow: 1
+  background-color: $bg-color
+
+.container
+  width: 1170px
+  margin: 0 auto
+  @media (max-width: 1200px)
+    width: 960px
+  @media (max-width: 992px)
+    width: calc(100% - 60px)
+  @media (max-width: 600px)
+    width: calc(100% - 30px)
+
+.title
+  font-family: $Montserrat-Alternates
+  font-weight: 700
+  font-size: 42px
+  @media (max-width: 600px)
+    position: relative
+    z-index: 1
+    text-align: center
+    min-width: 250px
+    max-width: 100%
+    font-size: 32px
+    background-color: $bg-color
+  &__wrap
+    display: flex
+    align-items: center
+    @media (max-width: 600px)
+      position: relative
+      justify-content: center
+  &__line
+    width: 100%
+    height: 2px
+    margin-top: 7px
+    margin-left: 20px
+    margin-right: 10px
+    background-color: $aquamarine
+    @media (max-width: 600px)
+      position: absolute
+      margin-left: 0
+      margin-right: 0
+
+.small-normal-title
+  font-family: $Montserrat
+  font-size: 22px
+  font-weight: 700
+
+.small-title
+  font-family: $Montserrat-Alternates
+  text-transform: uppercase
+  font-size: 22px
+  line-height: 1.15em
+
+.articles-preview
+  display: flex
+  flex-wrap: wrap
+  &__item
+    width: calc((100% - 60px)/ 3)
+    box-sizing: border-box
+    margin-right: 30px
+    padding: 25px
+    background-color: #fff
+    border-radius: 10px
+    overflow: hidden
+    &:nth-child(3n)
+      margin-right: 0
+    &:nth-child(n + 4)
+      margin-top: 30px
+    @media (max-width: 992px)
+      width: calc((100% - 15px)/ 2)
+      margin-right: 15px
+      &:nth-child(3n)
+        margin-right: 15px
+      &:nth-child(2n)
+        margin-right: 0
+      &:nth-child(n + 3)
+        margin-top: 15px
+    @media (max-width: 600px)
+      width: 100%
+      margin-right: 0
+      margin-top: 15px
+      &:first-child
+        margin-top: 0
+      &:nth-child(3n)
+        margin-right: 0
+  &__static-item
+    @media (max-width: 992px)
+      width: calc((100% - 60px)/ 3)
+      &:nth-child(3n)
+        margin-right: 0
+      &:nth-child(2n)
+        margin-right: 15px
+      &:nth-child(n + 3)
+        margin-top: 0
+    @media (max-width: 600px)
+      width: 100%
+      margin-right: 0
+      margin-top: 15px
+      &:first-child
+        margin-top: 0
+      &:nth-child(2n)
+        margin-right: 0
+      &:last-child
+        display: none
+  &__title
+    margin-bottom: 10px
+  &__img
+    width: calc(100% + 50px)
+    height: 180px
+    margin-top: -25px
+    margin-left: -25px
+    margin-bottom: 35px
+    img,
+    iframe,
+    video
+      height: 100%
+      width: 100%
+      object-fit: cover
+    iframe
+      border: 0
+  &__text
+    height: calc(16px * 1.2 * 10)
+    margin: 0
+    line-height: 1.2em
+    p
+      margin: 0
+  &__date
+    margin-top: 30px
+    margin-bottom: -10px
+
+.jumbotron
+  &__title
+    font-family: $Montserrat-Alternates
+    font-size: 42px
+    font-weight: 700
+    text-transform: uppercase
+    @media (max-width: 600px)
+      font-size: 32px
+
+.text-gray
+  color: $gray
+  font-size: 12px
+
+.more
+  font-size: inherit
+  font-family: inherit
+  color: $cyan
+  text-decoration: none
+  background-color: transparent
+  border: none
+  cursor: pointer
+  &:hover
+    color: $blue
+
+.line-gray
+  width: 100%
+  height: 1px
+  background-color: $light-gray
+
+.static-container
+  width: 1170px
+  @media (max-width: 600px)
+    width: 100%
+  &__wrap
+    @media (max-width: 1200px)
+      overflow-x: scroll
+    @media (max-width: 600px)
+      overflow-x: unset

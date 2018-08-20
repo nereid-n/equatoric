@@ -1,0 +1,15 @@
+extends ../components/layout-default/layout-default
+include ../components/blog-jumbotron/blog-jumbotron
+include ../components/blog-content/blog-content
+include ../components/blog-another/blog-another
+
+block head
+  - var pageTitle = 'Blog';
+
+block content
+  +blog-jumbotron()
+  +blog-content()
+  .container
+    .line-gray
+  +blog-another
+

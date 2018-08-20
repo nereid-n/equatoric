@@ -1,0 +1,39 @@
+@import ../../shared/sass/vars
+
+.social
+  position: absolute
+  right: 0
+  top: 40px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  margin: 0
+  padding: 0
+  list-style: none
+  @media (max-width: 600px)
+    position: static
+    flex-direction: row
+    margin-top: -15px
+    margin-bottom: 20px
+  &__item
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 40px
+    height: 40px
+    font-size: 22px
+    text-decoration: none
+    color: #fff
+    &:hover
+      filter: brightness(120%)
+  &__vk
+    background-color: $vk
+  &__ok
+    background-color: $ok
+  &__fb
+    background-color: $fb
+  &__tw
+    background-color: $tw
+  &__plus
+    background-color: $plus

@@ -1,0 +1,12 @@
+extends ../components/layout-default/layout-default
+include ../components/nav/nav
+include ../components/useful/useful
+include ../components/blog/blog
+
+block head
+    - var pageTitle = 'Index Page';
+
+block content
+  +nav()
+  +useful()
+  +blog()
